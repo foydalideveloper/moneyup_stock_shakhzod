@@ -1,0 +1,92 @@
+{
+  "test": "Task 4 — one-shot sealed-holdout OOS confirmation (no tuning)",
+  "scorer": "corrected phase1b.score_call (UNCHANGED)",
+  "cost_roundtrip_pct": 0.5,
+  "base_tstat_bar": 3.5,
+  "holdout_OOS": {
+    "long_pooled": {
+      "n": 247,
+      "mean_pct": -2.93,
+      "t": -6.36
+    },
+    "contrarian_mirror": {
+      "n": 247,
+      "mean_pct": 1.93,
+      "t": 4.19
+    },
+    "by_segment": {
+      "SCHEDULE": {
+        "n": 4,
+        "mean_pct": 2.092,
+        "t": 0.74
+      },
+      "ROTATION": {
+        "n": 6,
+        "mean_pct": -2.072,
+        "t": -1.67
+      },
+      "DIP-BUY": {
+        "n": 6,
+        "mean_pct": 0.548,
+        "t": 0.33
+      },
+      "BREAKOUT": {
+        "n": 0,
+        "mean_pct": null,
+        "hit": null,
+        "t": null
+      },
+      "LONG-GENERIC": {
+        "n": 231,
+        "mean_pct": -3.129,
+        "t": -6.48
+      }
+    },
+    "n_entered": 247
+  },
+  "exploratory_in_sample": {
+    "long_pooled": {
+      "n": 569,
+      "mean_pct": -6.72,
+      "t": -15.62
+    },
+    "contrarian_mirror": {
+      "n": 569,
+      "mean_pct": 5.72,
+      "t": 13.29
+    },
+    "by_segment": {
+      "SCHEDULE": {
+        "n": 16,
+        "mean_pct": -1.202,
+        "t": -0.62
+      },
+      "ROTATION": {
+        "n": 2,
+        "mean_pct": -9.57,
+        "t": -169.18
+      },
+      "DIP-BUY": {
+        "n": 41,
+        "mean_pct": -8.659,
+        "t": -8.66
+      },
+      "BREAKOUT": {
+        "n": 0,
+        "mean_pct": null,
+        "hit": null,
+        "t": null
+      },
+      "LONG-GENERIC": {
+        "n": 510,
+        "mean_pct": -6.726,
+        "t": -14.41
+      }
+    },
+    "n_entered": 569
+  },
+  "holdout_long_verdict": "LOSS CONFIRMED — significantly negative (mean -2.93%, t -6.36 <= -3.5)",
+  "exploratory_long_verdict": "LOSS CONFIRMED — significantly negative (mean -6.72%, t -15.62 <= -3.5)",
+  "contrarian_note": "PAPER signal only — net of the short's 0.50% round-trip; KRX shortability (borrowable universe) + borrow fee + 공매도 과열종목 status are UNRESOLVED, so this is NOT a tradeable edge. Most of his picks are mid/small theme names likely outside the retail-borrowable universe.",
+  "held_oos": true
+}

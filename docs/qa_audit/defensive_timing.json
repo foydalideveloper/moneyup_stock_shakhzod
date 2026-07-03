@@ -1,0 +1,239 @@
+{
+  "test": "TEST 1 defensive-timing",
+  "scope": "exploratory 70% (holdout noted)",
+  "index_proxies": {
+    "KOSPI~069500": "069500",
+    "KOSDAQ~229200": "229200"
+  },
+  "note": "pykrx index endpoints fail here → KODEX ETF proxies",
+  "n": {
+    "defensive": 213,
+    "market_loose": 25,
+    "market_strict": 10,
+    "stock_level": 188,
+    "buys": 742
+  },
+  "K_deflated": 8,
+  "deflated_tstat_bar": 4.02,
+  "bootstrap_n": 5000,
+  "market_loose": {
+    "KOSPI~069500": {
+      "label": "market_loose@KOSPI~069500",
+      "n": 25,
+      "horizons": {
+        "1": {
+          "n_fwd": 25,
+          "fwd_mean_pct": 1.873,
+          "baseline_mean_pct": 0.251,
+          "abnormal_pct": 1.622,
+          "t_abnormal": 2.12,
+          "boot_p_below_random": 1.0,
+          "before_mean_pct": 1.317
+        },
+        "5": {
+          "n_fwd": 25,
+          "fwd_mean_pct": 6.089,
+          "baseline_mean_pct": 1.31,
+          "abnormal_pct": 4.779,
+          "t_abnormal": 3.26,
+          "boot_p_below_random": 1.0,
+          "before_mean_pct": 6.547
+        },
+        "10": {
+          "n_fwd": 25,
+          "fwd_mean_pct": 13.483,
+          "baseline_mean_pct": 2.67,
+          "abnormal_pct": 10.813,
+          "t_abnormal": 7.33,
+          "boot_p_below_random": 1.0,
+          "before_mean_pct": 12.8
+        },
+        "20": {
+          "n_fwd": 25,
+          "fwd_mean_pct": 23.13,
+          "baseline_mean_pct": 5.412,
+          "abnormal_pct": 17.718,
+          "t_abnormal": 6.75,
+          "boot_p_below_random": 1.0,
+          "before_mean_pct": 22.842
+        }
+      }
+    },
+    "KOSDAQ~229200": {
+      "label": "market_loose@KOSDAQ~229200",
+      "n": 25,
+      "horizons": {
+        "1": {
+          "n_fwd": 25,
+          "fwd_mean_pct": -0.228,
+          "baseline_mean_pct": 0.063,
+          "abnormal_pct": -0.291,
+          "t_abnormal": -0.53,
+          "boot_p_below_random": 0.2652,
+          "before_mean_pct": -0.495
+        },
+        "5": {
+          "n_fwd": 25,
+          "fwd_mean_pct": 0.109,
+          "baseline_mean_pct": 0.316,
+          "abnormal_pct": -0.206,
+          "t_abnormal": -0.16,
+          "boot_p_below_random": 0.422,
+          "before_mean_pct": -0.593
+        },
+        "10": {
+          "n_fwd": 25,
+          "fwd_mean_pct": -0.216,
+          "baseline_mean_pct": 0.611,
+          "abnormal_pct": -0.827,
+          "t_abnormal": -0.68,
+          "boot_p_below_random": 0.2572,
+          "before_mean_pct": -0.244
+        },
+        "20": {
+          "n_fwd": 25,
+          "fwd_mean_pct": -5.276,
+          "baseline_mean_pct": 1.191,
+          "abnormal_pct": -6.466,
+          "t_abnormal": -3.74,
+          "boot_p_below_random": 0.0,
+          "before_mean_pct": -0.646
+        }
+      }
+    }
+  },
+  "market_strict": {
+    "KOSPI~069500": {
+      "label": "market_strict@KOSPI~069500",
+      "n": 10,
+      "horizons": {
+        "1": {
+          "n_fwd": 10,
+          "fwd_mean_pct": 1.696,
+          "baseline_mean_pct": 0.251,
+          "abnormal_pct": 1.445,
+          "t_abnormal": 1.47,
+          "boot_p_below_random": 0.9808,
+          "before_mean_pct": 1.714
+        },
+        "5": {
+          "n_fwd": 10,
+          "fwd_mean_pct": 10.385,
+          "baseline_mean_pct": 1.31,
+          "abnormal_pct": 9.075,
+          "t_abnormal": 4.3,
+          "boot_p_below_random": 1.0,
+          "before_mean_pct": 4.846
+        },
+        "10": {
+          "n_fwd": 10,
+          "fwd_mean_pct": 14.783,
+          "baseline_mean_pct": 2.67,
+          "abnormal_pct": 12.113,
+          "t_abnormal": 5.04,
+          "boot_p_below_random": 1.0,
+          "before_mean_pct": 11.694
+        },
+        "20": {
+          "n_fwd": 10,
+          "fwd_mean_pct": 29.872,
+          "baseline_mean_pct": 5.412,
+          "abnormal_pct": 24.46,
+          "t_abnormal": 6.82,
+          "boot_p_below_random": 1.0,
+          "before_mean_pct": 23.961
+        }
+      }
+    },
+    "KOSDAQ~229200": {
+      "label": "market_strict@KOSDAQ~229200",
+      "n": 10,
+      "horizons": {
+        "1": {
+          "n_fwd": 10,
+          "fwd_mean_pct": -0.861,
+          "baseline_mean_pct": 0.063,
+          "abnormal_pct": -0.925,
+          "t_abnormal": -1.42,
+          "boot_p_below_random": 0.1044,
+          "before_mean_pct": -0.176
+        },
+        "5": {
+          "n_fwd": 10,
+          "fwd_mean_pct": 0.397,
+          "baseline_mean_pct": 0.316,
+          "abnormal_pct": 0.081,
+          "t_abnormal": 0.05,
+          "boot_p_below_random": 0.5446,
+          "before_mean_pct": -1.355
+        },
+        "10": {
+          "n_fwd": 10,
+          "fwd_mean_pct": -1.469,
+          "baseline_mean_pct": 0.611,
+          "abnormal_pct": -2.08,
+          "t_abnormal": -0.94,
+          "boot_p_below_random": 0.1284,
+          "before_mean_pct": 0.615
+        },
+        "20": {
+          "n_fwd": 10,
+          "fwd_mean_pct": -3.733,
+          "baseline_mean_pct": 1.191,
+          "abnormal_pct": -4.923,
+          "t_abnormal": -2.09,
+          "boot_p_below_random": 0.018,
+          "before_mean_pct": 1.042
+        }
+      }
+    }
+  },
+  "secondary_buy_vs_defensive": {
+    "KOSPI~069500": {
+      "1": {
+        "after_buy_mean_pct": 1.457,
+        "after_defensive_mean_pct": 1.617,
+        "def_minus_buy_pp": 0.159
+      },
+      "5": {
+        "after_buy_mean_pct": 6.171,
+        "after_defensive_mean_pct": 6.398,
+        "def_minus_buy_pp": 0.226
+      },
+      "10": {
+        "after_buy_mean_pct": 10.161,
+        "after_defensive_mean_pct": 10.328,
+        "def_minus_buy_pp": 0.167
+      },
+      "20": {
+        "after_buy_mean_pct": 20.006,
+        "after_defensive_mean_pct": 20.408,
+        "def_minus_buy_pp": 0.403
+      }
+    },
+    "KOSDAQ~229200": {
+      "1": {
+        "after_buy_mean_pct": -0.259,
+        "after_defensive_mean_pct": -0.167,
+        "def_minus_buy_pp": 0.092
+      },
+      "5": {
+        "after_buy_mean_pct": -1.088,
+        "after_defensive_mean_pct": -0.665,
+        "def_minus_buy_pp": 0.424
+      },
+      "10": {
+        "after_buy_mean_pct": -2.68,
+        "after_defensive_mean_pct": -2.343,
+        "def_minus_buy_pp": 0.337
+      },
+      "20": {
+        "after_buy_mean_pct": -7.251,
+        "after_defensive_mean_pct": -6.782,
+        "def_minus_buy_pp": 0.469
+      }
+    }
+  },
+  "survivors_deflated": [],
+  "verdict": "UNDERPOWERED — market-level defensive n<30; cannot conclude"
+}

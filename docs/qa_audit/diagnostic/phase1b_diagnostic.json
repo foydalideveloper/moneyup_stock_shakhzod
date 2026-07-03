@@ -1,0 +1,621 @@
+{
+ "holdout_cutoff": "2026-06-01T13:14:48Z",
+ "n_holdout_videos": 152,
+ "n_explore_videos": 355,
+ "n_scored_rows": 571,
+ "n_long_generic": 510,
+ "n_dip_buy": 41,
+ "D1": {
+  "mean_overnight_gap_LG": {
+   "slice": "D1 LG overnight gap (prevclose→open) %",
+   "n": 510,
+   "mean_pct": 1.188,
+   "t": 6.64
+  },
+  "drift5_open_LG": {
+   "slice": "D1 LG post-entry drift open→5d (mkt-adj) %",
+   "n": 510,
+   "mean_pct": -7.92,
+   "t": -14.12
+  },
+  "var_a_next_open_5d_LG": {
+   "slice": "D1 entry (a) next-open → 5d %",
+   "n": 510,
+   "mean_pct": -7.92,
+   "t": -14.12
+  },
+  "var_b_next_close_5d_LG": {
+   "slice": "D1 entry (b) next-close → 5d %",
+   "n": 510,
+   "mean_pct": -7.491,
+   "t": -14.9
+  },
+  "var_c_open_plus1_5d_LG": {
+   "slice": "D1 entry (c) open+1 → 5d %",
+   "n": 510,
+   "mean_pct": -7.9,
+   "t": -15.3
+  },
+  "var_d_pubclose_5d_LG": {
+   "slice": "D1 entry (d) publish-day close → 5d %",
+   "n": 1,
+   "mean_pct": 17.138,
+   "t": null
+  }
+ },
+ "D2": {
+  "LONG-GENERIC": {
+   "1": {
+    "slice": "D2 LG h=1 %",
+    "n": 510,
+    "mean_pct": -2.503,
+    "t": -8.37
+   },
+   "2": {
+    "slice": "D2 LG h=2 %",
+    "n": 510,
+    "mean_pct": -3.671,
+    "t": -9.96
+   },
+   "3": {
+    "slice": "D2 LG h=3 %",
+    "n": 510,
+    "mean_pct": -5.22,
+    "t": -12.37
+   },
+   "5": {
+    "slice": "D2 LG h=5 %",
+    "n": 510,
+    "mean_pct": -7.92,
+    "t": -14.12
+   },
+   "10": {
+    "slice": "D2 LG h=10 %",
+    "n": 510,
+    "mean_pct": -14.317,
+    "t": -20.82
+   },
+   "20": {
+    "slice": "D2 LG h=20 %",
+    "n": 499,
+    "mean_pct": -30.775,
+    "t": -34.87
+   }
+  },
+  "DIP-BUY": {
+   "1": {
+    "slice": "D2 DIP h=1 %",
+    "n": 41,
+    "mean_pct": -3.81,
+    "t": -4.24
+   },
+   "2": {
+    "slice": "D2 DIP h=2 %",
+    "n": 41,
+    "mean_pct": -5.988,
+    "t": -3.67
+   },
+   "3": {
+    "slice": "D2 DIP h=3 %",
+    "n": 41,
+    "mean_pct": -7.069,
+    "t": -4.28
+   },
+   "5": {
+    "slice": "D2 DIP h=5 %",
+    "n": 41,
+    "mean_pct": -7.283,
+    "t": -2.99
+   },
+   "10": {
+    "slice": "D2 DIP h=10 %",
+    "n": 41,
+    "mean_pct": -16.656,
+    "t": -7.06
+   },
+   "20": {
+    "slice": "D2 DIP h=20 %",
+    "n": 41,
+    "mean_pct": -34.431,
+    "t": -13.43
+   }
+  }
+ },
+ "D3": {
+  "first_mention_net_barrier": {
+   "slice": "D3 first-mention net (barrier) %",
+   "n": 26,
+   "mean_pct": -4.457,
+   "t": -2.41
+  },
+  "repeat_net_barrier": {
+   "slice": "D3 repeat(2+) net (barrier) %",
+   "n": 545,
+   "mean_pct": -6.729,
+   "t": -15.1
+  },
+  "first_mention_LG_drift5": {
+   "slice": "D3 first-mention LG open→5d %",
+   "n": 23,
+   "mean_pct": -3.925,
+   "t": -1.53
+  },
+  "repeat_LG_drift5": {
+   "slice": "D3 repeat LG open→5d %",
+   "n": 487,
+   "mean_pct": -8.109,
+   "t": -14.14
+  },
+  "runup_regress": {
+   "n": 510,
+   "slope": 0.0041,
+   "intercept_pct": -7.962,
+   "corr": 0.009
+  },
+  "runup_low_tercile_fwd5": {
+   "slice": "D3 LG low prior-runup → fwd5 %",
+   "n": 170,
+   "mean_pct": -8.173,
+   "t": -9.86
+  },
+  "runup_high_tercile_fwd5": {
+   "slice": "D3 LG high prior-runup → fwd5 %",
+   "n": 170,
+   "mean_pct": -7.806,
+   "t": -6.66
+  }
+ },
+ "D4": {
+  "headline_all": {
+   "slice": "D4 headline all scored (barrier) %",
+   "n": 571,
+   "mean_pct": -6.625,
+   "t": -15.26
+  },
+  "ex_top3": {
+   "slice": "D4 excl top-3 contributors %",
+   "n": 291,
+   "mean_pct": -4.685,
+   "t": -8.5
+  },
+  "ex_top10": {
+   "slice": "D4 excl top-10 contributors %",
+   "n": 132,
+   "mean_pct": -2.4,
+   "t": -3.48
+  },
+  "battery_2cheonji": {
+   "slice": "D4 battery(2차전지) names %",
+   "n": 68,
+   "mean_pct": -7.531,
+   "t": -6.21
+  },
+  "non_battery": {
+   "slice": "D4 non-battery names %",
+   "n": 503,
+   "mean_pct": -6.503,
+   "t": -14.0
+  },
+  "top10_contributors": [
+   {
+    "ticker": "079900",
+    "name": "전진건설로봇",
+    "sum_net_pct": -1792.4,
+    "n": 201,
+    "mean_pct": -8.92
+   },
+   {
+    "ticker": "086520",
+    "name": "에코프로",
+    "sum_net_pct": -333.7,
+    "n": 39,
+    "mean_pct": -8.56
+   },
+   {
+    "ticker": "000250",
+    "name": "삼천당제약",
+    "sum_net_pct": -293.5,
+    "n": 40,
+    "mean_pct": -7.34
+   },
+   {
+    "ticker": "196170",
+    "name": "알테오젠",
+    "sum_net_pct": -263.0,
+    "n": 27,
+    "mean_pct": -9.74
+   },
+   {
+    "ticker": "028300",
+    "name": "HLB",
+    "sum_net_pct": -248.7,
+    "n": 34,
+    "mean_pct": -7.31
+   },
+   {
+    "ticker": "035720",
+    "name": "카카오",
+    "sum_net_pct": -167.2,
+    "n": 11,
+    "mean_pct": -15.2
+   },
+   {
+    "ticker": "005490",
+    "name": "포스코",
+    "sum_net_pct": -122.3,
+    "n": 23,
+    "mean_pct": -5.32
+   },
+   {
+    "ticker": "348370",
+    "name": "엔켐",
+    "sum_net_pct": -103.7,
+    "n": 19,
+    "mean_pct": -5.46
+   },
+   {
+    "ticker": "001440",
+    "name": "대한전선",
+    "sum_net_pct": -82.6,
+    "n": 24,
+    "mean_pct": -3.44
+   },
+   {
+    "ticker": "035420",
+    "name": "네이버",
+    "sum_net_pct": -59.1,
+    "n": 21,
+    "mean_pct": -2.81
+   }
+  ],
+  "by_month": {
+   "2024-06": {
+    "slice": "D4 month 2024-06 %",
+    "n": 11,
+    "mean_pct": 1.239,
+    "t": 0.59
+   },
+   "2024-07": {
+    "slice": "D4 month 2024-07 %",
+    "n": 8,
+    "mean_pct": -0.224,
+    "t": -0.09
+   },
+   "2026-04": {
+    "slice": "D4 month 2026-04 %",
+    "n": 225,
+    "mean_pct": -10.25,
+    "t": -11.82
+   },
+   "2026-05": {
+    "slice": "D4 month 2026-05 %",
+    "n": 316,
+    "mean_pct": -4.848,
+    "t": -12.1
+   },
+   "2026-06": {
+    "slice": "D4 month 2026-06 %",
+    "n": 11,
+    "mean_pct": 3.955,
+    "t": 2.55
+   }
+  },
+  "index_regime_return_pct": 283.19
+ },
+ "D5": {
+  "mirror_all_gross_5d": {
+   "slice": "D5 mirror short all gross→5d (no cost) %",
+   "n": 571,
+   "mean_pct": 7.313,
+   "t": 13.66
+  },
+  "mirror_all_net_5d": {
+   "slice": "D5 mirror short all net→5d (0.5%rt) %",
+   "n": 571,
+   "mean_pct": 6.813,
+   "t": 12.73
+  },
+  "mirror_shortable_net_5d": {
+   "slice": "D5 mirror short on SHORTABLE subset net+borrow→5d %",
+   "n": 0,
+   "mean_pct": null,
+   "t": null
+  },
+  "n_shortable_proxy": 0,
+  "n_total": 571,
+  "pct_shortable_proxy": 0.0,
+  "shortability_proxy": "KOSPI-listed AND market_cap>=1조 (KOSDAQ small-caps treated NOT retail-shortable)",
+  "borrow_assumption_annual": 0.05,
+  "caveats": "exact retail shortability / borrow fee / 공매도 과열종목 list per call-date NOT fully determinable from pykrx — proxy + conservative borrow used; flagged."
+ },
+ "slices_examined_total": 37,
+ "all_slices": [
+  {
+   "slice": "D1 LG overnight gap (prevclose→open) %",
+   "n": 510,
+   "mean_pct": 1.188,
+   "t": 6.64
+  },
+  {
+   "slice": "D1 LG post-entry drift open→5d (mkt-adj) %",
+   "n": 510,
+   "mean_pct": -7.92,
+   "t": -14.12
+  },
+  {
+   "slice": "D1 entry (a) next-open → 5d %",
+   "n": 510,
+   "mean_pct": -7.92,
+   "t": -14.12
+  },
+  {
+   "slice": "D1 entry (b) next-close → 5d %",
+   "n": 510,
+   "mean_pct": -7.491,
+   "t": -14.9
+  },
+  {
+   "slice": "D1 entry (c) open+1 → 5d %",
+   "n": 510,
+   "mean_pct": -7.9,
+   "t": -15.3
+  },
+  {
+   "slice": "D1 entry (d) publish-day close → 5d %",
+   "n": 1,
+   "mean_pct": 17.138,
+   "t": null
+  },
+  {
+   "slice": "D2 LG h=1 %",
+   "n": 510,
+   "mean_pct": -2.503,
+   "t": -8.37
+  },
+  {
+   "slice": "D2 DIP h=1 %",
+   "n": 41,
+   "mean_pct": -3.81,
+   "t": -4.24
+  },
+  {
+   "slice": "D2 LG h=2 %",
+   "n": 510,
+   "mean_pct": -3.671,
+   "t": -9.96
+  },
+  {
+   "slice": "D2 DIP h=2 %",
+   "n": 41,
+   "mean_pct": -5.988,
+   "t": -3.67
+  },
+  {
+   "slice": "D2 LG h=3 %",
+   "n": 510,
+   "mean_pct": -5.22,
+   "t": -12.37
+  },
+  {
+   "slice": "D2 DIP h=3 %",
+   "n": 41,
+   "mean_pct": -7.069,
+   "t": -4.28
+  },
+  {
+   "slice": "D2 LG h=5 %",
+   "n": 510,
+   "mean_pct": -7.92,
+   "t": -14.12
+  },
+  {
+   "slice": "D2 DIP h=5 %",
+   "n": 41,
+   "mean_pct": -7.283,
+   "t": -2.99
+  },
+  {
+   "slice": "D2 LG h=10 %",
+   "n": 510,
+   "mean_pct": -14.317,
+   "t": -20.82
+  },
+  {
+   "slice": "D2 DIP h=10 %",
+   "n": 41,
+   "mean_pct": -16.656,
+   "t": -7.06
+  },
+  {
+   "slice": "D2 LG h=20 %",
+   "n": 499,
+   "mean_pct": -30.775,
+   "t": -34.87
+  },
+  {
+   "slice": "D2 DIP h=20 %",
+   "n": 41,
+   "mean_pct": -34.431,
+   "t": -13.43
+  },
+  {
+   "slice": "D3 first-mention net (barrier) %",
+   "n": 26,
+   "mean_pct": -4.457,
+   "t": -2.41
+  },
+  {
+   "slice": "D3 repeat(2+) net (barrier) %",
+   "n": 545,
+   "mean_pct": -6.729,
+   "t": -15.1
+  },
+  {
+   "slice": "D3 first-mention LG open→5d %",
+   "n": 23,
+   "mean_pct": -3.925,
+   "t": -1.53
+  },
+  {
+   "slice": "D3 repeat LG open→5d %",
+   "n": 487,
+   "mean_pct": -8.109,
+   "t": -14.14
+  },
+  {
+   "slice": "D3 LG low prior-runup → fwd5 %",
+   "n": 170,
+   "mean_pct": -8.173,
+   "t": -9.86
+  },
+  {
+   "slice": "D3 LG high prior-runup → fwd5 %",
+   "n": 170,
+   "mean_pct": -7.806,
+   "t": -6.66
+  },
+  {
+   "slice": "D4 headline all scored (barrier) %",
+   "n": 571,
+   "mean_pct": -6.625,
+   "t": -15.26
+  },
+  {
+   "slice": "D4 excl top-3 contributors %",
+   "n": 291,
+   "mean_pct": -4.685,
+   "t": -8.5
+  },
+  {
+   "slice": "D4 excl top-10 contributors %",
+   "n": 132,
+   "mean_pct": -2.4,
+   "t": -3.48
+  },
+  {
+   "slice": "D4 battery(2차전지) names %",
+   "n": 68,
+   "mean_pct": -7.531,
+   "t": -6.21
+  },
+  {
+   "slice": "D4 non-battery names %",
+   "n": 503,
+   "mean_pct": -6.503,
+   "t": -14.0
+  },
+  {
+   "slice": "D4 month 2024-06 %",
+   "n": 11,
+   "mean_pct": 1.239,
+   "t": 0.59
+  },
+  {
+   "slice": "D4 month 2024-07 %",
+   "n": 8,
+   "mean_pct": -0.224,
+   "t": -0.09
+  },
+  {
+   "slice": "D4 month 2026-04 %",
+   "n": 225,
+   "mean_pct": -10.25,
+   "t": -11.82
+  },
+  {
+   "slice": "D4 month 2026-05 %",
+   "n": 316,
+   "mean_pct": -4.848,
+   "t": -12.1
+  },
+  {
+   "slice": "D4 month 2026-06 %",
+   "n": 11,
+   "mean_pct": 3.955,
+   "t": 2.55
+  },
+  {
+   "slice": "D5 mirror short all gross→5d (no cost) %",
+   "n": 571,
+   "mean_pct": 7.313,
+   "t": 13.66
+  },
+  {
+   "slice": "D5 mirror short all net→5d (0.5%rt) %",
+   "n": 571,
+   "mean_pct": 6.813,
+   "t": 12.73
+  },
+  {
+   "slice": "D5 mirror short on SHORTABLE subset net+borrow→5d %",
+   "n": 0,
+   "mean_pct": null,
+   "t": null
+  }
+ ],
+ "discipline": {
+  "holdout_sealed_before_analysis": true,
+  "holdout_videos": 152,
+  "holdout_cutoff": "2026-06-01",
+  "exploratory_videos": 355,
+  "slices_examined": 37,
+  "returns_reused_from": "phase1b.score_call",
+  "no_edge_or_pass_claim": true,
+  "isolation": "wrote only to qa_audit/diagnostic/",
+  "confirmatory_test_run": false
+ },
+ "ranked_hypotheses": [
+  {
+   "id": "H1",
+   "label": "cost-aware contrarian on SHORTABLE subset",
+   "status": "EXPLORATORY, not established",
+   "rule": "short next-open the long calls restricted to retail-shortable names; cover h=5; net 0.5% rt + borrow; beta+size adj",
+   "in_sample_paper": {
+    "mirror_net_5d_pct": 6.81,
+    "t": 12.73,
+    "caveat": "shortable subset undeterminable here (n=0)"
+   }
+  },
+  {
+   "id": "H2",
+   "label": "contrarian horizon/decay grid h in {1,3,5}",
+   "status": "EXPLORATORY",
+   "rule": "same mirror; pick exit horizon trading day-1 drop vs growing borrow; shortable subset only",
+   "in_sample_paper": {
+    "mirror_gross_1d_pct": 2.5,
+    "mirror_net_5d_pct": 6.81
+   }
+  },
+  {
+   "id": "NO-LONG",
+   "label": "no candidate long pocket",
+   "status": "long side negative at every horizon/entry/runup; excl-top10 still -2.4%"
+  }
+ ],
+ "draft_pre_registrations": [
+  {
+   "id": "PR-1",
+   "for": "H1",
+   "precondition": "build retail-shortable universe + 공매도 과열종목 flag + borrow source (NOT available in this env)",
+   "segment": "shortable LONG-GENERIC+DIP-BUY",
+   "entry": "short next-open",
+   "exit": "h=5 (grid 1,3,5)",
+   "adj": "beta+size, net 0.5% rt + borrow",
+   "deflated_bar": 4.242,
+   "n_floor": 30,
+   "test_on": "sealed 30% holdout (152 videos, >=2026-06-01) + future uploads",
+   "kill": "<30 shortable OR net-of-borrow <= 0"
+  },
+  {
+   "id": "PR-2",
+   "for": "H2",
+   "note": "pre-register a SINGLE horizon before seeing holdout to avoid horizon mining"
+  },
+  {
+   "id": "PR-3",
+   "for": "regime control",
+   "note": "recompute excluding 전진건설로봇 and excluding 2차전지; pre-register full + trimmed"
+  }
+ ],
+ "honest_framing": "(i) long-side loss broad+robust at all horizons (no long pocket) + conditional (iii) paper contrarian, shortability-gated and likely mostly non-shortable. No tradeable result claimed."
+}

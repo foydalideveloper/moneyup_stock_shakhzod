@@ -1,0 +1,251 @@
+{
+  "test": "taught-rules backtest — general strategies (STEP 1-3)",
+  "scope": "explore ~70% (holdout sealed, NOT analyzed)",
+  "universe": "top 200 KOSPI + 150 KOSDAQ by FDR cap (current membership — caveat)",
+  "n_universe": 350,
+  "split_date": "2025-06-17",
+  "horizons": [
+    5,
+    10,
+    20
+  ],
+  "K_deflated": 15,
+  "deflated_tstat_bar": 4.166,
+  "alpha_bonferroni": 0.00333,
+  "cost_roundtrip_pct": 0.5,
+  "beta_lookback": 252,
+  "nboot": 3000,
+  "excluded": "flow-based (수급/외국인/공매도/대차/program), schedule/일정매매, 순환매, CB/블록딜, 타점/감(vague)",
+  "rules": {
+    "R1_50MA_break_fail(short)": {
+      "5": {
+        "n": 4141,
+        "holdout_n": 2121,
+        "mean_net_pct": -0.702,
+        "t": -5.87,
+        "raw_mean_pct": -1.087,
+        "bnh_baseline_pct": -1.165,
+        "beats_buy_hold": true,
+        "rand_null_mean_pct": -0.798,
+        "p_vs_random": 0.2127,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge (negative)"
+      },
+      "10": {
+        "n": 4141,
+        "holdout_n": 2104,
+        "mean_net_pct": -0.849,
+        "t": -5.01,
+        "raw_mean_pct": -1.683,
+        "bnh_baseline_pct": -1.859,
+        "beats_buy_hold": true,
+        "rand_null_mean_pct": -1.083,
+        "p_vs_random": 0.0803,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge (negative)"
+      },
+      "20": {
+        "n": 4141,
+        "holdout_n": 2004,
+        "mean_net_pct": -1.414,
+        "t": -5.61,
+        "raw_mean_pct": -3.036,
+        "bnh_baseline_pct": -3.216,
+        "beats_buy_hold": true,
+        "rand_null_mean_pct": -1.703,
+        "p_vs_random": 0.128,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge (negative)"
+      }
+    },
+    "R2_reclaim_50MA(long)": {
+      "5": {
+        "n": 4184,
+        "holdout_n": 3108,
+        "mean_net_pct": -0.235,
+        "t": -1.73,
+        "raw_mean_pct": 0.139,
+        "bnh_baseline_pct": 0.165,
+        "beats_buy_hold": false,
+        "rand_null_mean_pct": -0.196,
+        "p_vs_random": 0.6243,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge (negative)"
+      },
+      "10": {
+        "n": 4184,
+        "holdout_n": 3092,
+        "mean_net_pct": -0.03,
+        "t": -0.16,
+        "raw_mean_pct": 0.804,
+        "bnh_baseline_pct": 0.859,
+        "beats_buy_hold": false,
+        "rand_null_mean_pct": 0.084,
+        "p_vs_random": 0.7373,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge (negative)"
+      },
+      "20": {
+        "n": 4184,
+        "holdout_n": 2927,
+        "mean_net_pct": 0.965,
+        "t": 3.48,
+        "raw_mean_pct": 2.459,
+        "bnh_baseline_pct": 2.216,
+        "beats_buy_hold": true,
+        "rand_null_mean_pct": 0.7,
+        "p_vs_random": 0.1487,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge"
+      }
+    },
+    "R3_jeongbaeyeol(long)": {
+      "5": {
+        "n": 2434,
+        "holdout_n": 3181,
+        "mean_net_pct": -0.402,
+        "t": -2.13,
+        "raw_mean_pct": 0.021,
+        "bnh_baseline_pct": 0.165,
+        "beats_buy_hold": false,
+        "rand_null_mean_pct": -0.196,
+        "p_vs_random": 0.899,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge (negative)"
+      },
+      "10": {
+        "n": 2434,
+        "holdout_n": 3164,
+        "mean_net_pct": -0.413,
+        "t": -1.72,
+        "raw_mean_pct": 0.468,
+        "bnh_baseline_pct": 0.859,
+        "beats_buy_hold": false,
+        "rand_null_mean_pct": 0.082,
+        "p_vs_random": 0.9837,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge (negative)"
+      },
+      "20": {
+        "n": 2434,
+        "holdout_n": 3051,
+        "mean_net_pct": 0.364,
+        "t": 1.05,
+        "raw_mean_pct": 1.957,
+        "bnh_baseline_pct": 2.216,
+        "beats_buy_hold": false,
+        "rand_null_mean_pct": 0.687,
+        "p_vs_random": 0.8253,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge"
+      }
+    },
+    "R4_resistance_breakout_vol(long)": {
+      "5": {
+        "n": 2229,
+        "holdout_n": 2583,
+        "mean_net_pct": 0.212,
+        "t": 0.89,
+        "raw_mean_pct": 0.828,
+        "bnh_baseline_pct": 0.165,
+        "beats_buy_hold": true,
+        "rand_null_mean_pct": -0.197,
+        "p_vs_random": 0.012,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge"
+      },
+      "10": {
+        "n": 2229,
+        "holdout_n": 2576,
+        "mean_net_pct": 0.827,
+        "t": 2.65,
+        "raw_mean_pct": 2.139,
+        "bnh_baseline_pct": 0.859,
+        "beats_buy_hold": true,
+        "rand_null_mean_pct": 0.088,
+        "p_vs_random": 0.0007,
+        "beats_random_deflated": true,
+        "PASS_explore": false,
+        "verdict": "no edge"
+      },
+      "20": {
+        "n": 2229,
+        "holdout_n": 2531,
+        "mean_net_pct": 2.307,
+        "t": 4.85,
+        "raw_mean_pct": 5.001,
+        "bnh_baseline_pct": 2.216,
+        "beats_buy_hold": true,
+        "rand_null_mean_pct": 0.696,
+        "p_vs_random": 0.0,
+        "beats_random_deflated": true,
+        "PASS_explore": true,
+        "verdict": "PASS explore (beats B&H + random @ deflated bar)"
+      }
+    },
+    "R5_pullback_SMA20(long)": {
+      "5": {
+        "n": 12560,
+        "holdout_n": 9873,
+        "mean_net_pct": -0.284,
+        "t": -3.83,
+        "raw_mean_pct": -0.076,
+        "bnh_baseline_pct": 0.165,
+        "beats_buy_hold": false,
+        "rand_null_mean_pct": -0.2,
+        "p_vs_random": 0.8743,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge (negative)"
+      },
+      "10": {
+        "n": 12560,
+        "holdout_n": 9786,
+        "mean_net_pct": 0.11,
+        "t": 1.0,
+        "raw_mean_pct": 0.689,
+        "bnh_baseline_pct": 0.859,
+        "beats_buy_hold": false,
+        "rand_null_mean_pct": 0.084,
+        "p_vs_random": 0.394,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge"
+      },
+      "20": {
+        "n": 12560,
+        "holdout_n": 9656,
+        "mean_net_pct": 0.538,
+        "t": 3.49,
+        "raw_mean_pct": 2.044,
+        "bnh_baseline_pct": 2.216,
+        "beats_buy_hold": false,
+        "rand_null_mean_pct": 0.699,
+        "p_vs_random": 0.864,
+        "beats_random_deflated": false,
+        "PASS_explore": false,
+        "verdict": "no edge"
+      }
+    }
+  },
+  "survivors_explore": [
+    "R4_resistance_breakout_vol(long)@20d"
+  ],
+  "prereg_locked": {
+    "file": "taught_rules_prereg.md",
+    "sha256": "92a4ea4100a017576f4bbcffa108ad98d17010bfb3065969f600e249b98d240f",
+    "locked": "2026-07-02",
+    "holdout_hypotheses": 1,
+    "holdout_bar_t": 4.166
+  }
+}

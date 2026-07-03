@@ -1,0 +1,146 @@
+{
+  "test": "TEST 2 contrarian tradeability — PROXY (real KRX shortability/borrow PENDING)",
+  "label": "PROXY — NOT a tradeable-edge claim",
+  "large_cap_threshold_env": 10000000000000.0,
+  "threshold_note": "≥10조 in this env's ~4× inflated scale ≈ ~2.4조 real ≈ KOSPI200-style large-cap",
+  "borrowable_proxy": "A = KOSPI-listed & cap≥thr (task spec) ; B = any-exchange large-cap (more realistic — 에코프로/알테오젠 are KOSDAQ large-caps that ARE shorted)",
+  "full_set_contrarian_reference": {
+    "exploratory": {
+      "n": 569,
+      "mean_pct": 5.72,
+      "t": 13.29
+    },
+    "holdout": {
+      "n": 247,
+      "mean_pct": 1.602,
+      "t": 3.42
+    }
+  },
+  "borrowable_split": {
+    "exploratory": {
+      "kospi_large": 112,
+      "any_large": 178,
+      "unknown_cap": 0,
+      "total": 569
+    },
+    "holdout": {
+      "kospi_large": 72,
+      "any_large": 97,
+      "unknown_cap": 0,
+      "total": 247
+    }
+  },
+  "exploratory": {
+    "label": "exploratory",
+    "n_all": 569,
+    "proxyA_KOSPI_large": {
+      "n": 112,
+      "pct_of_all": 19.7,
+      "mean_before_borrow_pct": 3.426,
+      "t_before_borrow": 3.89,
+      "avg_hold_days": 6.9,
+      "after_borrow": {
+        "3pct": {
+          "mean_net_pct": 3.369,
+          "t": 3.84
+        },
+        "6pct": {
+          "mean_net_pct": 3.312,
+          "t": 3.79
+        },
+        "12pct": {
+          "mean_net_pct": 3.198,
+          "t": 3.69
+        },
+        "20pct": {
+          "mean_net_pct": 3.046,
+          "t": 3.55
+        }
+      }
+    },
+    "proxyB_any_large": {
+      "n": 178,
+      "pct_of_all": 31.3,
+      "mean_before_borrow_pct": 5.137,
+      "t_before_borrow": 6.61,
+      "avg_hold_days": 6.8,
+      "after_borrow": {
+        "3pct": {
+          "mean_net_pct": 5.081,
+          "t": 6.56
+        },
+        "6pct": {
+          "mean_net_pct": 5.025,
+          "t": 6.51
+        },
+        "12pct": {
+          "mean_net_pct": 4.913,
+          "t": 6.41
+        },
+        "20pct": {
+          "mean_net_pct": 4.763,
+          "t": 6.27
+        }
+      }
+    }
+  },
+  "holdout": {
+    "label": "holdout",
+    "n_all": 247,
+    "proxyA_KOSPI_large": {
+      "n": 72,
+      "pct_of_all": 29.1,
+      "mean_before_borrow_pct": 0.719,
+      "t_before_borrow": 1.0,
+      "avg_hold_days": 2.5,
+      "after_borrow": {
+        "3pct": {
+          "mean_net_pct": 0.698,
+          "t": 0.97
+        },
+        "6pct": {
+          "mean_net_pct": 0.677,
+          "t": 0.94
+        },
+        "12pct": {
+          "mean_net_pct": 0.636,
+          "t": 0.89
+        },
+        "20pct": {
+          "mean_net_pct": 0.58,
+          "t": 0.81
+        }
+      }
+    },
+    "proxyB_any_large": {
+      "n": 97,
+      "pct_of_all": 39.3,
+      "mean_before_borrow_pct": 0.39,
+      "t_before_borrow": 0.58,
+      "avg_hold_days": 2.6,
+      "after_borrow": {
+        "3pct": {
+          "mean_net_pct": 0.368,
+          "t": 0.55
+        },
+        "6pct": {
+          "mean_net_pct": 0.347,
+          "t": 0.52
+        },
+        "12pct": {
+          "mean_net_pct": 0.305,
+          "t": 0.46
+        },
+        "20pct": {
+          "mean_net_pct": 0.248,
+          "t": 0.37
+        }
+      }
+    }
+  },
+  "gwamyeoldo_flag": "공매도 과열종목 status UNAVAILABLE here — some borrowable names may have been short-banned on the call date; the cap/exchange proxy cannot see this.",
+  "what_real_data_would_change": "real KRX 대차잔고/대차가능 + per-name borrow fee + 공매도 과열/금지 history would replace the cap proxy (exact borrowable set), replace the flat borrow-rate sweep with actual per-name fees, and drop short-banned dates — likely SHRINKING the tradeable subset further.",
+  "exploratory_survives_proxy": true,
+  "noted_holdout_confirms": false,
+  "verdict": "PROXY verdict — exploratory: KOSPI-large n=112 before 3.426% (t 3.89) → @20% borrow 3.046% (t 3.55); any-large n=178 before 5.137% → @20% 4.763%. NOTED HOLDOUT: KOSPI-large n=72 before 0.719% (t 1.0); any-large n=97 before 0.39% (t 0.58). Survives the borrow PROXY IN-SAMPLE but the noted holdout does NOT confirm (collapses to ~0, not significant) → NOT robust. Only ~20–31% of his calls are even plausibly borrowable (the big-fade mid/small theme names are excluded). NO tradeable edge. The 152-video holdout is already spent on the contrarian, so a clean confirmation requires real KRX shortability/borrow/과열 data AND a fresh forward out-of-sample — not another pass on spent data. Still a PROXY — no tradeable edge claimed."
+}

@@ -1,0 +1,18 @@
+{
+  "test": "R4 resistance-breakout+vol @20d — ONE-SHOT holdout (locked)",
+  "lock_ok": true,
+  "n_holdout": 2531,
+  "mean_betaadj_net_pct": -3.779,
+  "t": -6.99,
+  "bar_t": 4.166,
+  "buy_hold_raw_pct": 5.694,
+  "rule_raw_pct": 5.887,
+  "beats_buy_hold": true,
+  "rand_null_mean_pct": -3.744,
+  "p_vs_random": 0.5307,
+  "beats_random": false,
+  "alpha": 0.0033,
+  "EDGE": false,
+  "decision": "NO EDGE — a locked condition not met",
+  "survivorship_caveat": "Universe is CURRENT top-350-by-cap, not point-in-time. Even if this passes, a survivorship-clean confirmation with point-in-time KOSPI200/KOSDAQ150 membership is REQUIRED before calling it a real edge."
+}

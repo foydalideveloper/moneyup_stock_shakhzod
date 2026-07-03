@@ -1,0 +1,154 @@
+{
+  "task": "Task 5 offense hunt — CV stage (exploratory 70%); holdout SEALED & untouched",
+  "data_inventory": {
+    "exploratory_calls": 1315,
+    "unique_tickers": 53,
+    "feature_samples_entered_long": 568,
+    "prices": "pykrx OHLCV (full KRX universe) + FDR — WORK",
+    "caps": "FDR StockListing — WORK",
+    "FAIL_in_this_env": "pykrx market-cap/ticker-list/shorting/fundamental endpoints (empty/500)",
+    "supabase_feature_tables": "flows/short/fundamentals/features cover ONLY ~9 mega-caps (005930/035420/000660 of his set) — NOT the mid/small bulk",
+    "implication": "investor-flow / short-selling / fundamental features are NOT buildable for the mid-cap bulk; feature base = price/MA/momentum/volatility/volume + rel-strength/regime + caps + call-meta. flows/short/fundamentals usable only as a mega-cap overlay."
+  },
+  "track_A": {
+    "play_buckets": {
+      "LONG-GENERIC": {
+        "n": 509,
+        "mean_net_pct": -6.745,
+        "t": -14.43,
+        "powered": true,
+        "verdict": "no positive edge"
+      },
+      "DIP-BUY": {
+        "n": 41,
+        "mean_net_pct": -8.659,
+        "t": -8.66,
+        "powered": true,
+        "verdict": "no positive edge"
+      },
+      "SCHEDULE": {
+        "n": 16,
+        "mean_net_pct": -1.202,
+        "t": -0.62,
+        "powered": false,
+        "verdict": "UNDERPOWERED (n<30)"
+      },
+      "ROTATION": {
+        "n": 2,
+        "mean_net_pct": -9.57,
+        "t": -169.18,
+        "powered": false,
+        "verdict": "UNDERPOWERED (n<30)"
+      }
+    },
+    "setup_buckets": {
+      "unclassified_setup": {
+        "n": 366,
+        "mean_net_pct": -7.303,
+        "t": -13.22,
+        "powered": true,
+        "verdict": "no positive edge"
+      },
+      "수급_기관외인": {
+        "n": 156,
+        "mean_net_pct": -5.885,
+        "t": -7.24,
+        "powered": true,
+        "verdict": "no positive edge"
+      },
+      "공매도_매집선": {
+        "n": 74,
+        "mean_net_pct": -7.036,
+        "t": -6.49,
+        "powered": true,
+        "verdict": "no positive edge"
+      },
+      "눌림목_지지": {
+        "n": 48,
+        "mean_net_pct": -7.229,
+        "t": -6.03,
+        "powered": true,
+        "verdict": "no positive edge"
+      },
+      "OBV_핵심물량": {
+        "n": 10,
+        "mean_net_pct": -1.439,
+        "t": -0.7,
+        "powered": false,
+        "verdict": "UNDERPOWERED (n<30)"
+      }
+    },
+    "K_deflated": 6,
+    "deflated_tstat_bar": 3.952,
+    "powered_with_positive_edge": []
+  },
+  "track_B": {
+    "primary_conditional": {
+      "logistic_L2": {
+        "oos_auc": 0.5197,
+        "n_oof": 284,
+        "null_auc_mean": 0.5031,
+        "null_auc_95pct_FLOOR": 0.5724,
+        "p_vs_null": 0.3167,
+        "beats_null_floor": false,
+        "deflated_alpha": 0.025
+      },
+      "lightgbm": {
+        "oos_auc": 0.3988,
+        "n_oof": 284,
+        "null_auc_mean": 0.502,
+        "null_auc_95pct_FLOOR": 0.5536,
+        "p_vs_null": 1.0,
+        "beats_null_floor": false,
+        "deflated_alpha": 0.025
+      }
+    },
+    "n_samples": 568,
+    "n_features": 23,
+    "win_rate": 0.28,
+    "features": [
+      "atr_pct",
+      "dist_hi60",
+      "dist_lo60",
+      "entry_dow",
+      "entry_month",
+      "first_mention",
+      "gap_open",
+      "has_stated_price",
+      "idx_ret20",
+      "idx_vs_sma20",
+      "px_vs_sma120",
+      "px_vs_sma20",
+      "px_vs_sma5",
+      "px_vs_sma60",
+      "rel_str_20d",
+      "ret_1d",
+      "ret_20d",
+      "ret_5d",
+      "ret_60d",
+      "rsi14",
+      "sma20_slope",
+      "vol20",
+      "vol_z20"
+    ]
+  },
+  "mega_cap_slice": {
+    "tickers": {
+      "005930": "Samsung",
+      "035420": "NAVER",
+      "000660": "SK Hynix"
+    },
+    "n_entered": 44,
+    "mean_net_pct": -2.455,
+    "t": -1.96,
+    "powered_n>=30": true,
+    "note": "DESCRIPTIVE only (exploratory); pre-registered as a holdout hypothesis below — not a finding."
+  },
+  "prereg_locked": {
+    "file": "phase1b_prereg.md",
+    "sha256": "445d1745bc5779afc3103778f5ecdb8b57d3034c9b9db8b290db29cb52e6ca57",
+    "locked_date": "2026-06-30",
+    "K_holdout_hypotheses": 2,
+    "bonferroni_t_bar": 3.92
+  }
+}

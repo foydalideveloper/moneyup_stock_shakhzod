@@ -1,0 +1,76 @@
+# ---- Core runtime ----
+python-dotenv>=1.0.0
+numpy>=1.24
+pandas>=2.0
+
+# ---- Live data feed (Alpaca) ----
+alpaca-py>=0.33.0
+
+# ---- Live data feed (Kiwoom, KR) ----
+# REST auth + the real-time WebSocket. (Both ship as alpaca-py deps too.)
+requests>=2.31
+websockets>=12.0
+
+# ---- Historical data for training ----
+yfinance>=0.2.40
+
+# ---- Korean market data (KRX, free, no Kiwoom key) ----
+# pykrx scrapes KRX directly. OHLCV is open; the 공매도 (short-selling) endpoints
+# now require a free KRX account exposed via KRX_ID / KRX_PW env vars. Used by
+# tagent/data/krx_source.py (get_market_ohlcv_by_date / get_shorting_*_by_date).
+pykrx>=1.2.0
+# Short data can also still be loaded from a plain CSV export (pandas only) via
+# tagent/data/short_selling.py — no extra dependency, no credentials.
+
+# ---- Machine learning ----
+scikit-learn>=1.3
+lightgbm>=4.0
+xgboost>=2.0          # ensemble member + alt booster
+catboost>=1.2         # ensemble member (handles noisy features well)
+
+# ---- Performance stats + reporting ----
+ffn>=1.0.0
+quantstats>=0.0.62   # HTML tear sheets (Sharpe/Sortino/CAGR/maxDD/VaR/CVaR) — tagent/report.py
+
+# ---- Local web dashboard (FastAPI + static page) ----
+fastapi>=0.110
+uvicorn>=0.27
+
+# ---- Media monitoring (YouTube/TV briefing — AWARENESS ONLY, not a trading signal) ----
+# Transcripts for tagent/news/youtube_source.py — a robust fallback chain (stop at first success)
+# that keeps transcripts flowing even when youtube-transcript-api is IP-blocked:
+#   (a) youtube-transcript-api (Korean first; optional PROXY_URL / Webshare from .env)
+#   (b) yt-dlp auto-subtitles  (a different endpoint — often not blocked)
+#   (c) yt-dlp audio + local Whisper (no caption endpoint -> immune to the IP-block)
+# YOUTUBE_TRANSCRIPT_MODE (.env) picks the strategy order:
+#   auto (default) = a -> b -> c (cheap captions first, Whisper last);
+#   whisper        = Whisper FIRST (c) -> guarantees the FULL video transcript regardless of caption
+#                    availability or IP-blocks (uses the GPU per WHISPER_DEVICE); a/b only if c fails;
+#   api            = youtube-transcript-api only (a).
+# All imported lazily, so the unit tests never need them installed. yt-dlp needs ffmpeg + a JS
+# runtime (node/deno) on PATH; faster-whisper is the lighter Whisper backend (no torch).
+# Whisper (c) is GPU-aware: WHISPER_DEVICE=auto (default) -> cuda/float16 if a CUDA GPU is present
+# (~50x faster), else cpu/int8; override with WHISPER_DEVICE / WHISPER_COMPUTE_TYPE. cuda needs a
+# CUDA-enabled torch + faster-whisper's GPU libs (cuBLAS/cuDNN); falls back to CPU if GPU init fails.
+# WHISPER_MODEL (.env, default "small") sets the model size: tiny/base/small/medium/large-v3
+# (bigger = more accurate but slower; for Korean, small/medium is a good balance).
+# Anti-hallucination: faster-whisper runs with condition_on_previous_text=False (no repetition loops
+# across windows) and Silero VAD on by default to drop silence/music; WHISPER_VAD=0 turns VAD off.
+youtube-transcript-api>=0.6.2
+yt-dlp>=2024.0           # list uploads + auto-subtitles + audio download (strategies b/c)
+faster-whisper>=1.0      # local speech-to-text for strategy (c); openai-whisper also supported
+# Daily report rendering (tagent/news/report_render.py) -> downloadable .docx + .pdf. reportlab uses
+# a BUILT-IN Korean CID font (HYSMyeongJo-Medium) so Korean renders with NO bundled font files.
+python-docx>=1.1         # .docx with real hyperlinks
+reportlab>=4.0           # .pdf with clickable links + Korean CID font
+
+# ---- Testing ----
+pytest>=7.4
+httpx>=0.27          # FastAPI TestClient (dashboard endpoint tests)
+
+# ============================================================
+# Optional / later phases (uncomment when you reach them):
+# openbb>=4.0          # richer data layer (news, fundamentals)
+# nautilus_trader      # production backtest + execution engine
+# torch                # deep learning (TFT / LSTM) — Phase 4
+# ============================================================

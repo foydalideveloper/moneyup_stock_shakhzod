@@ -1,0 +1,39 @@
+{
+  "test": "H1 mega-cap one-shot holdout (LOCKED)",
+  "lock_sha256_ok": true,
+  "H2_run": false,
+  "H2_reason": "no shortability data authorized",
+  "tickers": {
+    "005930": "Samsung",
+    "035420": "NAVER",
+    "000660": "SK Hynix"
+  },
+  "n_entered": 45,
+  "mean_net_pct": -2.618,
+  "t": -3.61,
+  "bonferroni_bar": 3.92,
+  "decision_rule": "edge iff n>=30 & mean>0 & t>=+3.92",
+  "edge": false,
+  "verdict": "NO EDGE — rule not met (need n>=30 & mean>0 & t>=+3.92)",
+  "per_ticker": {
+    "005930": {
+      "entered": 24,
+      "n": 24,
+      "mean_pct": -1.777,
+      "t": -1.88
+    },
+    "000660": {
+      "entered": 4,
+      "n": 4,
+      "mean_pct": -3.52,
+      "t": -1.76
+    },
+    "035420": {
+      "entered": 17,
+      "n": 17,
+      "mean_pct": -3.592,
+      "t": -2.88
+    }
+  },
+  "stated_prior": "exploratory mega-cap -2.46% t-1.96 (NS) -> expected FAIL"
+}
